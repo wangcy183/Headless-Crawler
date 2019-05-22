@@ -1,0 +1,24 @@
+{
+  "name": "headless-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangcy183/Headless-Crawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangcy183/Headless-Crawler/issues"
+  },
+  "homepage": "https://github.com/wangcy183/Headless-Crawler#readme",
+  "devDependencies": {
+    "express": "^4.17.0",
+    "puppeteer": "^1.16.0",
+    "webpack": "^4.32.0"
+  }
+}
