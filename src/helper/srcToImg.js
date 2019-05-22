@@ -15,14 +15,10 @@ module.exports=async (src,dir)=>{
 
 //url=>image
 const urlToImg=promisify((url,dir,callback)=>{
-	//判断请求类型
 	const mod=/^https:/.test(url)?https:http;
-	//取文件的后缀
 	const ext=path.extname(url);
 	const file=path.join(dir,`${Date.now()}${ext}`);
-	//http的get命令
 	mod.get(url,res=>{
-		//将响应response通过管道输出到指定的文件夹
 		res.pipe(fs.createWriteStream(file))
 			.on('finish',()=>{
 				callback();
