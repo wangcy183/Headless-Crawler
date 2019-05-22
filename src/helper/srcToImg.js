@@ -19,6 +19,7 @@ const urlToImg=promisify((url,dir,callback)=>{
 	const ext=path.extname(url);
 	const file=path.join(dir,`${Date.now()}${ext}`);
 	mod.get(url,res=>{
+		//通过http get命令获取response对象 将该对象pipe到指定路径
 		res.pipe(fs.createWriteStream(file))
 			.on('finish',()=>{
 				callback();
