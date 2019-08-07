@@ -1,0 +1,7 @@
+public LocalDateTime plus(TemporalAmount amountToAdd)返回此日期时间的副本，并添加指定的金额。 
+这将返回一个LocalDateTime ，基于这一个，添加了指定的数量。 量通常是Period或Duration ，而可以是任何其他类型的实现TemporalAmount接口。 
+
+通过调用TemporalAmount.addTo(Temporal)将计算委托给金额对象。 数量执行可以以任何方式实现添加，但是它通常会回调到plus(long, TemporalUnit) 。 请参阅金额执行的文档，以确定是否可以成功添加。 
+
+此实例是不可变的，不受此方法调用的影响。 
+
